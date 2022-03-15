@@ -18,10 +18,18 @@ body {
 }
 
 .square {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px dashed blue;
   text-align: center;
+}
+
+.square1 {
+  width: calc(100% / 10);
+}
+.square2 {
+  width: calc(100% / 9);
+}
+.square3 {
+  width: calc(100% / 7);
 }
 
 .bg-blue {
