@@ -3,8 +3,10 @@
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 
-
-const difficulty = parseInt(prompt('Scegli un livello di difficoltà tra 1, 2 o 3'));
+let difficulty;
+do{
+    difficulty = parseInt(prompt('Scegli un livello di difficoltà tra 1, 2 o 3'));
+} while (difficulty < 1 || difficulty > 3 || isNaN(difficulty));
 
 const grid = document.querySelector('.grid');
 
@@ -12,7 +14,7 @@ let columns = 10;
 let rows = 10;
 
 if(difficulty == 2){
-     columns = 9;
+    columns = 9;
     rows = 9;
 }
 else if(difficulty == 3){
@@ -21,9 +23,8 @@ else if(difficulty == 3){
 }
 else{}
 
-
 const totalSquares = columns * rows;
-const allNumberExtract = [];
+//const allNumberExtract = [];
 
 //creazione quadrati dentro la griglia
 for(let i=0; i < totalSquares; i++){
@@ -31,7 +32,7 @@ for(let i=0; i < totalSquares; i++){
     grid.appendChild(square);
     square.innerHTML = [i + 1];
     square.classList.add('square');
-    let numberExtract;
+    // let numberExtract;
     
     if(difficulty == 2){
         square.classList.add('width9');
