@@ -1,5 +1,29 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.grid {
+  height: 700px;
+  width: 700px;
+  background-color: orange;
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px dashed blue;
+  text-align: center;
+}
+
+.bg-blue {
+  background-color: aqua;
 }
