@@ -28,10 +28,9 @@ const totalSquares = columns * rows;
 
 //creazione quadrati dentro la griglia
 for(let i=0; i < totalSquares; i++){
-    const square = document.createElement('div');
+    const square = createSquare()
     grid.appendChild(square);
     square.innerHTML = [i + 1];
-    square.classList.add('square');
     // let numberExtract;
     
     if(difficulty == 2){
@@ -58,6 +57,12 @@ for(let i=0; i < totalSquares; i++){
     })
 }
 
+//function create square
+function createSquare(){
+    const square = document.createElement('div');
+    square.classList.add('square');
+    return square;
+}
 
 
 /*
