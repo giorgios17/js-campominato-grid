@@ -22,13 +22,13 @@ body {
   text-align: center;
 }
 
-.square1 {
+.width10 {
   width: calc(100% / 10);
 }
-.square2 {
+.width9 {
   width: calc(100% / 9);
 }
-.square3 {
+.width7 {
   width: calc(100% / 7);
 }
 

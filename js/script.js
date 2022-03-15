@@ -3,6 +3,7 @@
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 
+
 const difficulty = parseInt(prompt('Scegli un livello di difficoltà tra 1, 2 o 3'));
 
 const grid = document.querySelector('.grid');
@@ -28,24 +29,26 @@ const allNumberExtract = [];
 for(let i=0; i < totalSquares; i++){
     const square = document.createElement('div');
     grid.appendChild(square);
-
+    square.innerHTML = [i + 1];
+    square.classList.add('square');
     let numberExtract;
     
     if(difficulty == 2){
-        square.classList.add('square', 'square2');
-        numberExtract = numeroUnico(1, 81, allNumberExtract);
+        square.classList.add('width9');
+      //  numberExtract = numeroUnico(1, 81, allNumberExtract);
     }
     else if(difficulty == 3){
-        square.classList.add('square', 'square3');
-        numberExtract = numeroUnico(1, 49, allNumberExtract);
+        square.classList.add('width7');
+      //  numberExtract = numeroUnico(1, 49, allNumberExtract);
     }
     else{
-        square.classList.add('square', 'square1');
-        numberExtract = numeroUnico(1, 100, allNumberExtract);
+        square.classList.add('width10');
+       // numberExtract = numeroUnico(1, 100, allNumberExtract);
     }
-
+/*
     square.innerHTML = numberExtract;
     allNumberExtract.push(numberExtract);
+*/
 
 //function click cambio colore
     square.addEventListener('click', function(){
@@ -53,6 +56,10 @@ for(let i=0; i < totalSquares; i++){
 
     })
 }
+
+
+
+/*
 
 // numero random in un determinato range
 function numeroRandomRange(min, max){
@@ -69,6 +76,6 @@ function numeroUnico (min, max, used){
     }
     return numeroUnico;
 }
-
+*/
 
 
